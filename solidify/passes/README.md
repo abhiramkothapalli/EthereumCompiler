@@ -1,0 +1,7 @@
+# llvm-pass-solidify
+
+#Copyright 2017 National Technology & Engineering Solutions of Sandia, LLC (NTESS). Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software.
+
+
+Converts .ll assembly to Solidity
+

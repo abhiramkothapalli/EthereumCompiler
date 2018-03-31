@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#Copyright 2017 National Technology & Engineering Solutions of Sandia, LLC (NTESS). Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software.
+
+for f in *.cpp; do
+
+echo
+echo
+echo Converting: ${f}
+echo ---------------------
+echo
+echo
+
+file=${f%.cpp}
+
+clang -S -emit-llvm ${f} -o ${file}.ll
+
+llvm-as ${file}.ll
+
+opt -load ../build/solidify/libSolidifyPass.so -solidify < ${file}.bc > /dev/null
+
+done;

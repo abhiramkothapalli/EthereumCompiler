@@ -1,0 +1,14 @@
+
+#OS Files
+.DS_Store
+
+# Remove pdfs for tex projects
+*.pdf
+
+# Tex files
+*.aux
+*.out
+*.log
+
+# Program Outputfiles
+*.pyc

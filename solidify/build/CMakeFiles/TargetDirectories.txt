@@ -1,0 +1,8 @@
+/Users/abhiramkothapalli/Workspace/solidify/build/CMakeFiles/rebuild_cache.dir
+/Users/abhiramkothapalli/Workspace/solidify/build/CMakeFiles/edit_cache.dir
+/Users/abhiramkothapalli/Workspace/solidify/build/skeleton/CMakeFiles/rebuild_cache.dir
+/Users/abhiramkothapalli/Workspace/solidify/build/skeleton/CMakeFiles/edit_cache.dir
+/Users/abhiramkothapalli/Workspace/solidify/build/skeleton/CMakeFiles/SkeletonPass.dir
+/Users/abhiramkothapalli/Workspace/solidify/build/solidify/CMakeFiles/rebuild_cache.dir
+/Users/abhiramkothapalli/Workspace/solidify/build/solidify/CMakeFiles/edit_cache.dir
+/Users/abhiramkothapalli/Workspace/solidify/build/solidify/CMakeFiles/SolidifyPass.dir

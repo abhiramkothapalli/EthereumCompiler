@@ -1,0 +1,18 @@
+Machine MajorPass
+
+address party_aa = 0xFAB3efe8156D678748Fc8E822dAC1798DB349909
+address party_ab = 0x89Fe1949162A52Eba983FeBBc8Ca787FBa30F948
+address party_ac = 0x89Fe1949162A52Eba983FeBBc8Ca787FBa30F948
+address party_ba = 0x89Fe1949162A52Eba983FeBBc8Ca787FBa30F948
+address party_bb = 0xC9205FB87Ce29e1BD83f10ADe08BA0c543AdD647
+address party_bc = 0xaDB5c20431843d02cb986251931dA93971aF326d
+
+state under_group_a {
+transition under_group_b requires party_aa, party_ab or party_ab, party_ac or party_aa, party_ac
+}
+
+state under_group_b {
+transition under_group_b requires party_ba, party_bb or party_bb, party_bc or party_ba, party_bc
+}
+
+start = under_group_a

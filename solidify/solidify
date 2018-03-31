@@ -1,0 +1,31 @@
+#!/bin/bash
+
+#Copyright 2017 National Technology & Engineering Solutions of Sandia, LLC (NTESS). Under the terms of Contract DE-NA0003525 with NTESS, the U.S. Government retains certain rights in this software.
+
+USAGE="Usage: ./solidify -i inputfile -o outputfile"
+INPUTFILE=
+OUTPUTFILE=/dev/null
+
+while getopts "hi:o:" opt; do
+    case $opt in
+	h)
+	    echo $USAGE
+	    ;;
+	i)
+	    INPUTFILE=$OPTARG
+	    ;;
+	o)
+	    OUTPUTFILE=$OPTARG
+	    ;;
+	\?)
+	    echo "Invalid option: -$OPTARG"
+	    exit 1
+	    ;;
+	:)
+	    echo "Option -$OPTARG requires an argument."
+	    exit 1
+	    ;;
+    esac
+done
+	    
+opt -load build/solidify/libSolidifyPass.so -solidify < $INPUTFILE > $OUTPUTFILE

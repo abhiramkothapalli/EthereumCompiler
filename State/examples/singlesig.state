@@ -1,0 +1,14 @@
+Machine Singlesig
+
+address a = 0xFAB3efe8156D678748Fc8E822dAC1798DB349909
+address b = 0x89Fe1949162A52Eba983FeBBc8Ca787FBa30F948
+address c = 0xC9205FB87Ce29e1BD83f10ADe08BA0c543AdD647
+
+state begin {
+transition end requires a or b or c
+}
+
+state end {}
+
+
+start = begin

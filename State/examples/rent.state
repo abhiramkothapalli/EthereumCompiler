@@ -1,0 +1,27 @@
+Machine Rent
+
+address landlord = 0xFAB3efe8156D678748Fc8E822dAC1798DB349909
+address tenant_a = 0x89Fe1949162A52Eba983FeBBc8Ca787FBa30F948
+address tenant_b = 0xC9205FB87Ce29e1BD83f10ADe08BA0c543AdD647
+address sublease = 0xaDB5c20431843d02cb986251931dA93971aF326d
+
+state under_landlord {
+transition under_tenant_a requires landlord, tenant_a
+transition under_tenant_b requires landlord, tenant_b
+}
+
+state under_tenant_a {
+transition under_sublease requires landlord, tenant_a, sublease
+transition under_landlord requires landlord, tenant_a
+}
+
+state under_tenant_b {
+transition under_landlord requires landlord, tenant_b
+}
+
+state under_sublease {
+transition under_landlord requires landlord, sublease
+}
+
+
+start = under_landlord
